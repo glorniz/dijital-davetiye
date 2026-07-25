@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Düğün Davetiyesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SARAY KAPISI GİRİŞ EFEKTİ -->
+    <div id="palaceIntro" class="palace-intro">
+        <div class="palace-door left-door">
+            <div class="door-inner-border"></div>
+        </div>
+        <div class="palace-door right-door">
+            <div class="door-inner-border"></div>
+        </div>
+        <div class="palace-seal" id="openDoorsBtn">
+            <div class="seal-ring">
+                <span class="seal-initials" id="sealInitials">Y & A</span>
+            </div>
+            <span class="seal-text">Davetiyeyi Aç</span>
+        </div>
+    </div>
+
+    <!-- MÜZİK ÇALAR -->
+    <audio id="bgMusic" loop>
+        <source id="musicSource" src="" type="audio/mp3">
+    </audio>
+
+    <!-- MÜZİK AÇ/KAPAT BUTONU -->
+    <div id="soundToggle" class="sound-toggle hidden">
+        <span id="soundIcon">🎵</span>
+    </div>
+
+    <!-- ANA İÇERİK -->
+    <main class="invitation-wrapper">
+        
+        <!-- BAŞLANGIÇ / İSİMLER -->
+        <section class="hero-section">
+            <!-- İlk tasarımdaki zarif giriş yazısı -->
+            <div class="welcome-note-section">
+                <p class="vintage-subtitle">Ömür boyu sürecek birlikteliğimizin başlangıcında...</p>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="names-container">
+                <h1 id="brideName" class="big-name">Yasemin</h1>
+                <span class="ampersand">&amp;</span>
+                <h1 id="groomName" class="big-name">Ahmet</h1>
+            </div>
+            <p class="date-highlight" id="mainDate">12 EYLÜL 2026</p>
+        </section>
+
+        <!-- AİLELER (GOLD ÇERÇEVELİ KUTU) -->
+        <section class="family-section">
+            <div class="gold-box">
+                <h2 class="box-title">AİLELER</h2>
+                <div class="family-grid">
+                    <div class="family-side">
+                        <span class="side-label">Kız Tarafı</span>
+                        <p id="brideParents" class="parents-name">Fatma & Ahmet Yılmaz</p>
+                    </div>
+                    <div class="family-side">
+                        <span class="side-label">Erkek Tarafı</span>
+                        <p id="groomParents" class="parents-name">Ayşe & Mehmet Demir</p>
+                    </div>
+                </div>
+                <p class="invite-text">Evlatlarının bu mutlu gününde siz değerli dostlarını aralarında görmekten onur duyarlar.</p>
+            </div>
+        </section>
+
+        <!-- ETKİNLİK DETAYLARI -->
+        <section class="events-section">
+            <!-- Kına -->
+            <div class="event-card">
+                <h3 class="event-title">Kına Gecesi</h3>
+                <p class="event-detail"><strong>Tarih:</strong> <span id="kinaDate">11 Eylül 2026, Cuma</span></p>
+                <p class="event-detail"><strong>Saat:</strong> <span id="kinaTime">19:00</span></p>
+                <p class="event-detail"><strong>Mekan:</strong> <span id="kinaLoc">Gözde Balo Salonu, Bursa</span></p>
+                <a href="#" id="kinaMap" class="map-btn" target="_blank">Haritada Gör</a>
+            </div>
+
+            <!-- Düğün -->
+            <div class="event-card">
+                <h3 class="event-title">Düğün Töreni</h3>
+                <p class="event-detail"><strong>Tarih:</strong> <span id="dugunDate">12 Eylül 2026, Cumartesi</span></p>
+                <p class="event-detail"><strong>Saat:</strong> <span id="dugunTime">18:30</span></p>
+                <p class="event-detail"><strong>Mekan:</strong> <span id="dugunLoc">Grand Balo Salonu, Bursa</span></p>
+                <a href="#" id="dugunMap" class="map-btn" target="_blank">Haritada Gör</a>
+            </div>
+        </section>
+
+        <!-- GALERİ BÖLÜMÜ -->
+        <section class="gallery-section">
+            <h2 class="section-heading">GÜZEL ANILARIMIZ</h2>
+            <div class="gallery-grid">
+                <img src="images/1.jpg" alt="Anı 1" class="gallery-img">
+                <img src="images/2.jpg" alt="Anı 2" class="gallery-img">
+                <img src="images/3.jpg" alt="Anı 3" class="gallery-img">
+            </div>
+        </section>
+
+        <!-- IBAN BÖLÜMÜ -->
+        <section class="iban-section">
+            <div class="gold-box">
+                <h2 class="box-title">HEDİYE & TAKI</h2>
+                <p class="invite-text" style="margin-bottom: 20px;">Düğünümüze çelenk göndermek yerine veya dijital yoldan hediyesini iletmek isteyen sevdiklerimiz için hesap bilgilerimiz:</p>
+                
+                <div class="iban-details">
+                    <p class="bank-name" id="bankName">Garanti BBVA</p>
+                    <p class="iban-owner" id="ibanOwner">Yasemin Yılmaz</p>
+                    <div class="iban-copy-row">
+                        <code id="ibanNumber">TR33 0006 2000 1110 0006 8888 99</code>
+                        <button id="copyIbanBtn" class="copy-btn">Kopyala</button>
+                    </div>
+                    <span id="copyAlert" class="copy-alert">Kopyalandı!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER / RSVP -->
+        <footer class="footer-section">
+            <h2 class="section-heading">LCV</h2>
+            <p class="invite-text">Lütfen katılım durumunuzu bize bildirin.</p>
+            <div class="rsvp-buttons">
+                <button id="rsvpYes" class="rsvp-btn">Katılıyorum</button>
+                <button id="rsvpNo" class="rsvp-btn outline">Katılamıyorum</button>
+            </div>
+            <p class="footer-note">Sevgiyle Kalın...</p>
+        </footer>
+
+    </main>
+
+    <!-- GALERİ İÇİN BÜYÜTME (LIGHTBOX) -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Büyük Boyut">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
