@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Düğün Davetiyesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- WhatsApp Paylaşım Önizleme Etiketleri -->
+<meta property="og:title" content="Yasemin & Ayşe - Düğün Davetiyesi">
+<meta property="og:description" content="Bu özel günümüzde siz de aramızda olun 💍">
+<meta property="og:image" content="images/1.jpg">
+</head>
+<body>
+
+    <!-- CANLI & GÖSTERİŞLİ GİRİŞ / ZARF EKRANI -->
+    <div id="envelope-screen" class="envelope-screen">
+        <div class="ambient-glow"></div>
+        <div class="envelope-container" id="openEnvelopeBtn">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="wax-seal">
+                    <span id="sealText">Y & A</span>
+                </div>
+            </div>
+            <div class="envelope-text">
+                <h2 id="sealNames">Y & A</h2>
+                <p>Dokunarak Davetiyeyi Aç</p>
+                <span class="touch-pulse-icon">✨</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MÜZİK ÇALAR -->
+    <audio id="bgMusic" loop>
+        <source src="music/piano.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- MÜZİK KONTROL İKONU -->
+    <div id="musicToggle" class="music-toggle hidden">
+        <span id="musicIcon">🔇</span>
+    </div>
+
+    <!-- ANA İÇERİK -->
+    <main id="mainContent" class="main-content hidden">
+        
+        <!-- HERO / İSİMLER BÖLÜMÜ -->
+        <section class="hero-section">
+            <h1 class="apple-title" id="heroTitle">
+                <!-- JS ile otomatik doldurulacak -->
+            </h1>
+        </section>
+
+        <!-- ZOOM OLAN BÜYÜK FOTOĞRAF -->
+        <section class="zoom-section">
+            <div class="zoom-img-container">
+                <img src="images/1.jpg" alt="Çift Fotoğrafı" id="zoomImg">
+            </div>
+        </section>
+
+        <!-- BİZİM HİKAYEMİZ -->
+        <section class="story-section">
+            <div class="section-badge">💍</div>
+            <h2>Bizim Hikayemiz</h2>
+            <div class="animated-line"></div>
+            <p class="story-text" id="storyText">Hayatımızın en özel yolculuğuna çıkarken, bu anlamlı günde siz değerli sevdiklerimizi aramızda görmekten mutluluk duyarız.</p>
+        </section>
+
+        <!-- TARİH, SAAT VE KONUM -->
+        <section class="info-section">
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-icon">📅</span>
+                    <h3>Tarih</h3>
+                    <p id="infoDate">12 Eylül 2026</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🕐</span>
+                    <h3>Saat</h3>
+                    <p id="infoTime">18:30</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <h3>Konum</h3>
+                    <p id="infoLocation">Grand Balo Salonu, Bursa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CANLI GERİ SAYIM -->
+        <section class="countdown-section">
+            <div class="section-badge">⏳</div>
+            <h2>Düğüne Kalan Zaman</h2>
+            <div id="countdown" class="countdown-grid">
+                <div class="countdown-box"><span id="days">00</span><p>Gün</p></div>
+                <div class="countdown-box"><span id="hours">00</span><p>Saat</p></div>
+                <div class="countdown-box"><span id="minutes">00</span><p>Dakika</p></div>
+                <div class="countdown-box"><span id="seconds">00</span><p>Saniye</p></div>
+            </div>
+        </section>
+
+        <!-- PROGRAM -->
+        <section class="program-section">
+            <div class="section-badge">🎉</div>
+            <h2>Program</h2>
+            <div class="timeline" id="timelineContainer">
+                <!-- JS ile dinamik doldurulur -->
+            </div>
+        </section>
+
+        <!-- GALİBİYET / İBAN EKLENTİSİ -->
+        <section class="iban-section">
+            <div class="section-badge">🎁</div>
+            <h2>Mutluluğumuza Katkı</h2>
+            <p class="story-text" style="margin-bottom: 25px;">Çelenk göndermek yerine veya hediyesini dijital iletmek isteyenler için hesap bilgilerimiz aşağıdadır.</p>
+            
+            <div class="iban-card">
+                <div class="iban-header">
+                    <span id="ibanOwner">Yasemin Yılmaz</span>
+                    <span class="bank-name" id="bankName">Garanti BBVA</span>
+                </div>
+                <div class="iban-content">
+                    <code id="ibanNumber">TR33 0006 2000 1110 0006 8888 99</code>
+                    <button class="copy-btn" id="copyIbanBtn">Kopyala</button>
+                </div>
+                <span class="copy-alert" id="copyAlert">IBAN Kopyalandı! ✨</span>
+            </div>
+        </section>
+
+        <!-- GALERİ & LIGHTBOX -->
+        <section class="gallery-section">
+            <div class="section-badge">📸</div>
+            <h2>Galeri</h2>
+            <div class="gallery-grid">
+                <img src="images/1.jpg" alt="Fotoğraf 1" class="gallery-img">
+                <img src="images/2.jpg" alt="Fotoğraf 2" class="gallery-img">
+                <img src="images/3.jpg" alt="Fotoğraf 3" class="gallery-img">
+            </div>
+        </section>
+
+        <!-- KATILIM DURUMU (WHATSAPP) -->
+        <section class="rsvp-section">
+            <h2>Lütfen Katılımınızı Bildirin</h2>
+            <div class="rsvp-buttons">
+                <button id="rsvpYes" class="rsvp-btn yes">🤍 Katılıyorum</button>
+                <button id="rsvpNo" class="rsvp-btn no">🤍 Katılamıyorum</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="section-badge">🤍</div>
+            <p id="footerText">Teşekkür ederiz.</p>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Büyük Boyut">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
