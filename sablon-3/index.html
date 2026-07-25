@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Amelia &amp; Julian — Düğün Davetiyesi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- CSS dosyasını buraya bağlıyoruz -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ INTRO ============ -->
+<section id="intro" aria-label="Açılış animasyonu">
+  <div class="intro-hearts" id="introHearts"></div>
+  <div class="intro-names" id="introNames"></div>
+  <div class="balloon-wrap" id="balloonWrap" role="button" tabindex="0" aria-label="Davetiyeyi açmak için balona dokunun">
+    <svg class="balloon-svg" viewBox="0 0 140 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M70 6C35 6 12 34 12 70c0 34 24 60 50 66l8 3 8-3c26-6 50-32 50-66C128 34 105 6 70 6Z" stroke="#F8F5EF" stroke-width="1.6"/>
+      <path d="M58 132c0 6 5 11 12 11s12-5 12-11" stroke="#F8F5EF" stroke-width="1.6"/>
+      <path d="M62 143h16v10c0 4-3 7-8 7s-8-3-8-7v-10Z" stroke="#F8F5EF" stroke-width="1.6"/>
+    </svg>
+    <div class="balloon-rope"></div>
+  </div>
+  <div class="intro-text">Davetiyeyi Açmak İçin Balona Dokunun</div>
+</section>
+
+<!-- ============ SITE ============ -->
+<div id="site">
+
+  <!-- LANDING -->
+  <section class="landing container">
+    <svg class="car-illustration reveal" viewBox="0 0 320 150" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="var(--primary)" stroke-width="1.3">
+      <path d="M18 108c8-30 30-40 55-42h100c22 2 40 12 52 30l14 4c8 2 12 7 12 14v6H14v-4c0-4 2-7 4-8Z"/>
+      <circle cx="88" cy="112" r="16"/><circle cx="88" cy="112" r="5"/>
+      <circle cx="228" cy="112" r="16"/><circle cx="228" cy="112" r="5"/>
+      <path d="M78 66c4-14 16-22 30-22h44c16 0 28 8 34 22" />
+      <path d="M118 44v22M156 44v22"/>
+      <path d="M40 106c26-8 60-8 60-8" opacity=".5"/>
+      <g opacity=".8">
+        <path d="M50 78c-6-6-16-4-16 4 0 6 8 10 16 16 8-6 16-10 16-16 0-8-10-10-16-4Z"/>
+        <path d="M270 78c-6-6-16-4-16 4 0 6 8 10 16 16 8-6 16-10 16-16 0-8-10-10-16-4Z"/>
+      </g>
+    </svg>
+
+    <h1 class="couple-names reveal">
+      <span id="brideNameEl">Amelia</span>
+      <span class="couple-amp">&amp;</span>
+      <span id="groomNameEl">Julian</span>
+    </h1>
+
+    <div class="divider reveal"></div>
+
+    <p class="quote reveal" id="quoteEl">"İçinizden, kendileriyle huzura kavuşacağınız eşler yaratıp aranızda sevgi ve merhamet var etmesi O'nun delillerindendir."</p>
+    <p class="quote-source reveal" id="quoteSourceEl">— Rûm Suresi, 30:21</p>
+
+    <div class="parents reveal">
+      <div class="side">
+        <div class="role">Kızı</div>
+        <div class="names" id="brideParents">Bay Robert Hale &amp; Bayan Catherine Hale</div>
+      </div>
+      <div class="side">
+        <div class="role">Oğlu</div>
+        <div class="names" id="groomParents">Bay Thomas Reed &amp; Bayan Margaret Reed</div>
+      </div>
+    </div>
+
+    <div class="wedding-meta reveal" id="weddingMetaEl">Cumartesi · 12 Aralık 2026 · Bursa, Türkiye</div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-wrap container" id="countdownSection">
+    <div class="eyebrow reveal">Geri Sayım</div>
+    <div class="countdown reveal" id="countdown">
+      <div class="count-card"><div class="count-num" id="cd-days">00</div><div class="count-label">Gün</div></div>
+      <div class="count-card"><div class="count-num" id="cd-hours">00</div><div class="count-label">Saat</div></div>
+      <div class="count-card"><div class="count-num" id="cd-mins">00</div><div class="count-label">Dakika</div></div>
+      <div class="count-card"><div class="count-num" id="cd-secs">00</div><div class="count-label">Saniye</div></div>
+    </div>
+    <div class="today-banner reveal" id="todayBanner">
+      <div class="heart">❤</div>
+      <p>Bugün Bizim Düğün Günümüz</p>
+    </div>
+  </section>
+
+  <!-- WEDDING INFO -->
+  <section class="section container" id="infoSection">
+    <div class="section-title reveal">Bize Katılın</div>
+    <h2 class="section-heading reveal">Düğün Bilgileri</h2>
+
+    <div class="info-grid" id="infoGrid"><!-- injected --></div>
+  </section>
+
+  <!-- CONVOY -->
+  <section class="section container convoy" id="convoySection">
+    <div class="section-title reveal">Tören Öncesi</div>
+    <h2 class="section-heading reveal">Konvoy</h2>
+    <svg class="convoy-icon reveal" viewBox="0 0 60 60" fill="none" stroke="var(--primary)" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 40c4-14 12-20 22-20s18 6 22 20"/><circle cx="20" cy="42" r="6"/><circle cx="40" cy="42" r="6"/>
+    </svg>
+    <div class="convoy-time reveal" id="convoyTime">17:00</div>
+    <div class="convoy-point reveal" id="convoyPoint">Rosewood Manor Kapılarından Hareket Edilecektir</div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section container" id="gallerySection">
+    <div class="section-title reveal">Hikayemiz</div>
+    <h2 class="section-heading reveal">Anılar</h2>
+    <div class="gallery-grid reveal" id="galleryGrid"><!-- injected --></div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section container" id="rsvpSection">
+    <div class="section-title reveal">Lütfen Yanıtlayın</div>
+    <h2 class="section-heading reveal">Bize Katılacak Mısınız?</h2>
+    <div class="rsvp-buttons reveal">
+      <button class="rsvp-btn" data-rsvp="accept">Katılıyorum</button>
+      <button class="rsvp-btn" data-rsvp="maybe">Belki</button>
+      <button class="rsvp-btn" data-rsvp="decline">Katılamıyorum</button>
+    </div>
+    <p class="rsvp-confirm" id="rsvpConfirm"></p>
+  </section>
+
+  <!-- WISHES -->
+  <section class="section container" id="wishesSection">
+    <div class="section-title reveal">Bize Bir Not Bırakın</div>
+    <h2 class="section-heading reveal">Misafir Dilekleri</h2>
+    <form class="wishes-form reveal" id="wishesForm">
+      <input type="text" id="wishName" placeholder="Adınız" required>
+      <textarea id="wishMsg" rows="3" placeholder="Çift için mesajınız" required></textarea>
+      <button type="submit" class="btn solid" style="align-self:center; margin-top:4px;">Dilekleri Gönder</button>
+    </form>
+    <div class="wishes-list" id="wishesList"></div>
+  </section>
+
+  <footer>
+    <div class="ornament-divider reveal">
+      <svg viewBox="0 0 120 30" fill="none" stroke="var(--line)" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 15h40M80 15h40" /><circle cx="60" cy="15" r="6"/>
+        <path d="M54 15c0-6 6-9 6-9s6 3 6 9-6 9-6 9-6-3-6-9Z"/>
+      </svg>
+    </div>
+    <div class="fnames reveal">Amelia &amp; Julian</div>
+    <div class="fdate reveal" id="footerDate">12 · 12 · 2026</div>
+    <p class="fnote reveal">Sevgi ve minnetle, hikayemizin bir parçası olduğunuz için teşekkür ederiz.</p>
+  </footer>
+</div>
+
+<!-- MUSIC BUTTON -->
+<button id="music-btn" aria-label="Müziği aç/kapat" aria-pressed="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" id="musicIcon">
+    <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+  </svg>
+</button>
+<audio id="bgAudio" loop preload="none"></audio>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lbNext">&#8250;</button>
+</div>
+
+<!-- JavaScript dosyasını buraya bağlıyoruz -->
+<script src="script.js"></script>
+</body>
+</html>
